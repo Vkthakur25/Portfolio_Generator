@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/preview/*" element={<PreviewPage />} />
+        <Route path="/preview" element={<PreviewPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

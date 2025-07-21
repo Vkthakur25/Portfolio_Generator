@@ -10,4 +10,4 @@ function PortfolioPreview({ data }) {
   return <TemplateOne data={data} />;
 }
 
-export default PortfolioPreview;
+//export default PortfolioPreview;

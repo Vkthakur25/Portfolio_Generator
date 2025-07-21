@@ -19,7 +19,7 @@ function App() {
 
   // Open preview page using react-router
   const handlePreviewNewPage = () => {
-    window.history.pushState({ data: formData }, '', '/preview');
+    window.history.pushState({ data: formData }, '/preview');
     window.location.assign('/preview');
   };
 

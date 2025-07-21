@@ -5,8 +5,8 @@ import TemplateOne from './TemplateOne';
 function PreviewPage() {
   const previewData = window.history.state?.data;
   const defaultData = {
-    firstName: 'John',
-    lastName: 'Doe',
+    firstName: 'Vivek',
+    lastName: 'Kumar',
     title: 'Web Developer',
     about: 'This is a sample portfolio preview.',
     linkedin: '',
