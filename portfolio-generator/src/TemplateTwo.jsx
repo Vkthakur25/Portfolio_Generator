@@ -20,7 +20,6 @@ function TemplateTwo({ data }) {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Decorative accent */}
       <div style={{
         position: 'absolute',
         top: '-60px',

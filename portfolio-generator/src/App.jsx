@@ -1,26 +1,24 @@
 import UserForm from './UserForm';
 import { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import PreviewPage from './PreviewPage';
 
-function App() {
+function MainApp() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     title: '',
-    about: '',
+    profileImage: '',
     linkedin: '',
     github: '',
     projects: [],
     experience: [],
   });
-
-  const handleFormChange = (data) => {
-    setFormData(data);
-  };
-
-  // Open preview page using react-router
+  const navigate = useNavigate();
+  const handleFormChange = (data) => setFormData(data);
   const handlePreviewNewPage = () => {
-    window.history.pushState({ data: formData }, '/preview');
-    window.location.assign('/preview');
+    window.scrollTo(0, 0);
+    navigate('/preview', { state: { formData } });
   };
 
   return (
@@ -45,5 +43,12 @@ function App() {
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Routes>
+      <Route path="*" element={<MainApp />} />
+      <Route path="/preview" element={<PreviewPage />} />
+    </Routes>
+  );
+}
 
